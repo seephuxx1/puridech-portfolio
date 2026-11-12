@@ -21,14 +21,6 @@ export default function HeroSection() {
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-16 px-6 pt-12 pb-16 sm:pt-16 sm:pb-20 lg:px-10 xl:grid-cols-[1.15fr_0.85fr]">
         <div className="animate-fade-up">
-          <p className="glass mb-8 inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 text-xs font-medium text-ink">
-            <span className="relative flex size-2">
-              <span className="absolute inset-0 animate-ping rounded-full bg-emerald-400 opacity-70" />
-              <span className="relative size-2 rounded-full bg-emerald-400" />
-            </span>
-            {HERO.status}
-          </p>
-
           <p className="mb-5 font-mono text-xs tracking-widest text-accent uppercase">
             {SITE.name} — {SITE.role}
           </p>
@@ -72,10 +64,11 @@ function CodeCard() {
       aria-hidden="true"
       className="glow-border hidden animate-fade-up rounded-2xl bg-void shadow-[0_30px_80px_-20px_var(--glow-1)] [animation-delay:150ms] xl:block"
     >
-      <div className="flex items-center gap-1.5 border-b border-white/10 px-5 py-4">
-        <span className="size-2.5 rounded-full bg-white/20" />
-        <span className="size-2.5 rounded-full bg-white/20" />
-        <span className="size-2.5 rounded-full bg-white/20" />
+      <div className="flex items-center gap-2 border-b border-white/10 px-5 py-4">
+        {/* macOS-style window buttons */}
+        <span className="size-3 rounded-full bg-[radial-gradient(circle_at_35%_30%,#ff9c96,#ff5f57_55%,#d63a33)]" />
+        <span className="size-3 rounded-full bg-[radial-gradient(circle_at_35%_30%,#ffd978,#febc2e_55%,#d99a0b)]" />
+        <span className="size-3 rounded-full bg-[radial-gradient(circle_at_35%_30%,#7ee88a,#28c840_55%,#169a2c)]" />
         <span className="ml-3 font-mono text-xs text-white/50">
           developer.ts
         </span>

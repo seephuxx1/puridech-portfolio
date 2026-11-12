@@ -1,6 +1,5 @@
 import type { Project } from "../models/project.model";
 
-// TODO: project 3 is a placeholder — replace with your real work.
 export const PROJECTS: Project[] = [
   {
     title: "CREEXme",
@@ -31,9 +30,17 @@ export const PROJECTS: Project[] = [
     },
   },
   {
-    title: "ผลงานที่ 3",
-    category: "API และบริการ",
-    description: "โครงสร้างระบบ ปริมาณงานที่รองรับ และสิ่งที่คุณภูมิใจ",
-    tech: ["Node.js", "Redis", "Docker"],
+    title: "OpenChat",
+    category: "ระบบรวมแชทหลายช่องทาง",
+    description:
+      "ระบบรวมแชทลูกค้าจากทุกช่องทางมาไว้ที่เดียวของบริษัท ค้นหาและกรองบทสนทนาตามสถานะและช่องทาง ติดแท็กแชทและรายชื่อ และตอบลูกค้าได้จากหน้าจอเดียว",
+    tech: [],
+    isConfidential: true,
+    image: {
+      src: "/vincentclinic/openchat-inbox.png",
+      alt: "หน้ากล่องข้อความของระบบ OpenChat มีรายการแชทด้านซ้ายและบทสนทนาด้านขวา ข้อมูลลูกค้าถูกเบลอ",
+      width: 3016,
+      height: 1354,
+    },
   },
 ];
