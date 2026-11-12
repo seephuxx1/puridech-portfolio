@@ -4,7 +4,7 @@ import Footer from "@/shared/components/Footer";
 import ThemeProvider from "@/shared/components/ThemeProvider";
 import SiteNav from "@/shared/layout/components/SiteNav";
 import { SITE } from "@/shared/lib/constants";
-import { THEME_INIT_SCRIPT } from "@/shared/lib/theme";
+import { SCROLL_TOP_SCRIPT, THEME_INIT_SCRIPT } from "@/shared/lib/theme";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -40,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+        <script dangerouslySetInnerHTML={{ __html: SCROLL_TOP_SCRIPT }} />
       </head>
       <body className="min-h-full">
         <ThemeProvider>

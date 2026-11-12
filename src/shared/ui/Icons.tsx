@@ -98,3 +98,12 @@ export function MailIcon(props: IconProps) {
     </Icon>
   );
 }
+
+export function LockIcon(props: IconProps) {
+  return (
+    <Icon {...props}>
+      <rect x="3" y="7" width="10" height="6.5" rx="1.5" />
+      <path d="M5.25 7V5.25a2.75 2.75 0 0 1 5.5 0V7" />
+    </Icon>
+  );
+}

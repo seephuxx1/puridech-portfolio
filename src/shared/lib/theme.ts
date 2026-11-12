@@ -22,8 +22,12 @@ export function getThemePreference(): ThemePreference {
 
 export function applyTheme(preference: ThemePreference): void {
   const isDark =
-    preference === "dark" || (preference === "system" && matchMedia(DARK_QUERY).matches);
-  document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
+    preference === "dark" ||
+    (preference === "system" && matchMedia(DARK_QUERY).matches);
+  document.documentElement.setAttribute(
+    "data-theme",
+    isDark ? "dark" : "light",
+  );
 }
 
 export function setThemePreference(preference: ThemePreference): void {
@@ -58,3 +62,10 @@ export function watchSystemTheme(): () => void {
     window.removeEventListener("storage", reapply);
   };
 }
+
+/**
+ * Runs inline in <head>: a refresh always starts at the top of the page.
+ * Turns off the browser's scroll restoration and drops any #section from the URL,
+ * which would otherwise jump straight back down.
+ */
+export const SCROLL_TOP_SCRIPT = `(function(){try{history.scrollRestoration="manual";if(location.hash)history.replaceState(null,"",location.pathname+location.search)}catch(e){}})()`;

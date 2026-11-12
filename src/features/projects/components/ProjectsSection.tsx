@@ -12,7 +12,7 @@ export default function ProjectsSection() {
         description="ตัวอย่างระบบที่ผมออกแบบ พัฒนา และส่งมอบ"
       />
 
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2">
         {PROJECTS.map((project, index) => (
           <ProjectCard key={project.title} project={project} index={index} />
         ))}

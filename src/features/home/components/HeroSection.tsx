@@ -5,7 +5,10 @@ import TechMarquee from "./TechMarquee";
 
 export default function HeroSection() {
   return (
-    <section id="top" className="relative scroll-mt-16 overflow-hidden lg:scroll-mt-0">
+    <section
+      id="top"
+      className="relative scroll-mt-16 overflow-hidden lg:scroll-mt-0"
+    >
       <div aria-hidden="true" className="bg-grid absolute inset-0" />
       <div
         aria-hidden="true"
@@ -16,7 +19,7 @@ export default function HeroSection() {
         className="aurora top-10 right-[-10%] size-[28rem] animate-drift bg-[var(--glow-2)] [animation-delay:-8s]"
       />
 
-      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-16 px-6 pt-24 pb-24 sm:pt-32 lg:px-10 xl:grid-cols-[1.15fr_0.85fr]">
+      <div className="relative mx-auto grid w-full max-w-6xl items-center gap-16 px-6 pt-12 pb-16 sm:pt-16 sm:pb-20 lg:px-10 xl:grid-cols-[1.15fr_0.85fr]">
         <div className="animate-fade-up">
           <p className="glass mb-8 inline-flex items-center gap-2.5 rounded-full px-4 py-1.5 text-xs font-medium text-ink">
             <span className="relative flex size-2">
@@ -39,7 +42,9 @@ export default function HeroSection() {
             ))}
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-8 text-muted">{HERO.intro}</p>
+          <p className="mt-6 max-w-xl text-lg leading-8 text-muted">
+            {HERO.intro}
+          </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
             <Button href="#projects">
@@ -71,13 +76,18 @@ function CodeCard() {
         <span className="size-2.5 rounded-full bg-white/20" />
         <span className="size-2.5 rounded-full bg-white/20" />
         <span className="size-2.5 rounded-full bg-white/20" />
-        <span className="ml-3 font-mono text-xs text-white/50">developer.ts</span>
+        <span className="ml-3 font-mono text-xs text-white/50">
+          developer.ts
+        </span>
       </div>
       <pre className="overflow-x-auto p-6 font-mono text-[13px] leading-7 text-white/90">
         <code>
           <span className="text-[#7aa5ff]">const</span> developer = {"{"}
-          {"\n  "}name: <span className="text-[#8be9fd]">&quot;{SITE.name}&quot;</span>,{"\n  "}
-          role: <span className="text-[#8be9fd]">&quot;{SITE.role}&quot;</span>,{"\n  "}stack: [
+          {"\n  "}name:{" "}
+          <span className="text-[#8be9fd]">&quot;{SITE.name}&quot;</span>,
+          {"\n  "}
+          role: <span className="text-[#8be9fd]">&quot;{SITE.role}&quot;</span>,
+          {"\n  "}stack: [
           {HERO.snippet.stack.map((item) => (
             <span key={item}>
               {"\n    "}
@@ -85,8 +95,12 @@ function CodeCard() {
             </span>
           ))}
           {"\n  "}],{"\n  "}focus:{" "}
-          <span className="text-[#8be9fd]">&quot;{HERO.snippet.focus}&quot;</span>,{"\n"}
-          {"}"};<span className="ml-1 inline-block h-4 w-2 animate-blink bg-[#7aa5ff] align-middle" />
+          <span className="text-[#8be9fd]">
+            &quot;{HERO.snippet.focus}&quot;
+          </span>
+          ,{"\n"}
+          {"}"};
+          <span className="ml-1 inline-block h-4 w-2 animate-blink bg-[#7aa5ff] align-middle" />
         </code>
       </pre>
     </div>

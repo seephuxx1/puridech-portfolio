@@ -6,6 +6,7 @@ export {
   BriefcaseIcon,
   CodeIcon,
   GridIcon,
+  LockIcon,
   MailIcon,
   MonitorIcon,
   MoonIcon,

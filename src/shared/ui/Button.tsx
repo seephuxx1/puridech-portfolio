@@ -21,7 +21,12 @@ const SIZES = {
 };
 
 /** Link styled as a button — every call to action on the site navigates. */
-export function Button({ variant = "primary", size = "md", className, ...props }: ButtonProps) {
+export function Button({
+  variant = "primary",
+  size = "md",
+  className,
+  ...props
+}: ButtonProps) {
   return (
     <a
       className={cn(
